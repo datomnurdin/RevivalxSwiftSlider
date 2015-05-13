@@ -10,18 +10,18 @@ import UIKit
 
 class RangeSlider: UIControl {
 
-    var minimumValue: Float = 0.0
-    var maximumValue: Float = 1.0
-    var minimumRange: Float = 0.0
-    var selectedMinimumValue: Float = 0.2
-    var selectedMaximumValue: Float = 0.8
+    var minimumValue: Float!
+    var maximumValue: Float!
+    var minimumRange: Float!
+    var selectedMinimumValue: Float!
+    var selectedMaximumValue: Float!
     
-    var distanceFromCenter: Float = 0.0
+    var distanceFromCenter: Float!
     
-    var _padding: Float = 20
+    var _padding: Float!
     
-    var _maxThumbOn: Bool = false
-    var _minThumbOn: Bool = false
+    var _maxThumbOn: Bool!
+    var _minThumbOn: Bool!
     
     var _minThumb = UIImageView()
     var _maxThumb = UIImageView()
@@ -88,14 +88,14 @@ class RangeSlider: UIControl {
         var touchPoint: CGPoint = touch.locationInView(self)
         
         
-        if _minThumbOn {
+        if (_minThumbOn != nil) {
             _minThumb.center = CGPointMake(max(CGFloat(self.xForValue(minimumValue)),min(touchPoint.x - CGFloat(distanceFromCenter), CGFloat(self.xForValue(selectedMaximumValue - minimumRange)))),CGFloat(_minThumb.center.y))
-            selectedMinimumValue = Float(self.valueForX(_minThumb.center.x))
+            selectedMinimumValue = self.valueForX(Float(_minThumb.center.x))
         }
     
-        if _maxThumbOn {
+        if (_maxThumbOn != nil) {
             _maxThumb.center = CGPointMake(min(CGFloat(self.xForValue(maximumValue)), max(touchPoint.x - CGFloat(distanceFromCenter), CGFloat(self.xForValue(selectedMinimumValue + minimumRange)))), CGFloat(_maxThumb.center.y))
-            selectedMaximumValue = self.valueForX(_maxThumb.center.x)
+            selectedMaximumValue = self.valueForX(Float(_maxThumb.center.x))
         }
         
         self.updateTrackHighlight()
