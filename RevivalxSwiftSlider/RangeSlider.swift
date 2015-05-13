@@ -35,21 +35,21 @@ class RangeSlider: UIControl {
         _maxThumbOn = false;
         _padding = 20;
         
-        let _trackBackground = UIImageView(image: UIImage(named: "bar-background.png"))
+        _trackBackground = UIImageView(image: UIImage(named: "bar-background.png"))
         _trackBackground.center = self.center;
         self.addSubview(_trackBackground)
         
-        let _track = UIImageView(image: UIImage(named: "bar-highlight.png"))
+        _track = UIImageView(image: UIImage(named: "bar-highlight.png"))
         _track.center = self.center
         self.addSubview(_track)
         
         
-        let _minThumb = UIImageView(image: UIImage(named: "handle.png"), highlightedImage: UIImage(named: "handle-hover.png"))
+        _minThumb = UIImageView(image: UIImage(named: "handle.png"), highlightedImage: UIImage(named: "handle-hover.png"))
         _minThumb.frame = CGRectMake(0,0, self.frame.size.height,self.frame.size.height);
         _minThumb.contentMode = UIViewContentMode.Center
         self.addSubview(_minThumb)
         
-        let _maxThumb = UIImageView(image: UIImage(named: "handle.png"), highlightedImage: UIImage(named: "handle-hover.png"))
+        _maxThumb = UIImageView(image: UIImage(named: "handle.png"), highlightedImage: UIImage(named: "handle-hover.png"))
         _maxThumb.frame = CGRectMake(0,0, self.frame.size.height,self.frame.size.height)
         _maxThumb.contentMode = UIViewContentMode.Center
         self.addSubview(_maxThumb)
