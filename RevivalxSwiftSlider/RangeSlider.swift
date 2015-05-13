@@ -80,12 +80,6 @@ class RangeSlider: UIControl {
         return minimumValue + (x - _padding) / (Float(self.frame.size.width) - (_padding * 2)) * (maximumValue - minimumValue)
     }
     
-    /*
-    func continueTrackingWithTouch(UITouch *)touch withEvent:(UIEvent *)event{
-        if !_minThumbOn && !_maxThumbOn {
-            return YES;
-        }
-    */
     func continueTrackingWithTouch(touch: UITouch, event: UIEvent) -> Bool {
         if !_minThumbOn && !_maxThumbOn {
             return true
@@ -95,12 +89,12 @@ class RangeSlider: UIControl {
         
         
         if _minThumbOn {
-            _minThumb.center = CGPointMake(max(self.xForValue(minimumValue),min(touchPoint.x - distanceFromCenter, self.xForValue(selectedMaximumValue - minimumRange))),_minThumb.center.y)
+            _minThumb.center = CGPointMake(max(CGFloat(self.xForValue(minimumValue)),min(touchPoint.x - CGFloat(distanceFromCenter), CGFloat(self.xForValue(selectedMaximumValue - minimumRange)))),CGFloat(_minThumb.center.y))
             selectedMinimumValue = Float(self.valueForX(_minThumb.center.x))
         }
     
         if _maxThumbOn {
-            _maxThumb.center = CGPointMake(min(self.xForValue(maximumValue), max(touchPoint.x - distanceFromCenter, self.xForValue(selectedMinimumValue + minimumRange))), _maxThumb.center.y)
+            _maxThumb.center = CGPointMake(min(CGFloat(self.xForValue(maximumValue)), max(touchPoint.x - CGFloat(distanceFromCenter), CGFloat(self.xForValue(selectedMinimumValue + minimumRange)))), CGFloat(_maxThumb.center.y))
             selectedMaximumValue = self.valueForX(_maxThumb.center.x)
         }
         
