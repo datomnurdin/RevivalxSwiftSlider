@@ -22,6 +22,7 @@
 		16FA45511B02578F00A91A55 /* handle.png in Resources */ = {isa = PBXBuildFile; fileRef = 16FA45491B02578F00A91A55 /* handle.png */; };
 		16FA45521B02578F00A91A55 /* handle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16FA454A1B02578F00A91A55 /* handle@2x.png */; };
 		16FA45541B02613400A91A55 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FA45531B02613400A91A55 /* TableViewController.swift */; };
+		16FA45561B027DD900A91A55 /* data-points.png in Resources */ = {isa = PBXBuildFile; fileRef = 16FA45551B027DD900A91A55 /* data-points.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		16FA45491B02578F00A91A55 /* handle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = handle.png; path = Images/handle.png; sourceTree = "<group>"; };
 		16FA454A1B02578F00A91A55 /* handle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "handle@2x.png"; path = "Images/handle@2x.png"; sourceTree = "<group>"; };
 		16FA45531B02613400A91A55 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		16FA45551B027DD900A91A55 /* data-points.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "data-points.png"; path = "Images/data-points.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 		16FA45421B02576F00A91A55 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				16FA45551B027DD900A91A55 /* data-points.png */,
 				16FA45431B02578F00A91A55 /* bar-background.png */,
 				16FA45441B02578F00A91A55 /* bar-background@2x.png */,
 				16FA45451B02578F00A91A55 /* bar-highlight.png */,
@@ -229,6 +232,7 @@
 			files = (
 				16FA454F1B02578F00A91A55 /* handle-hover.png in Resources */,
 				16FA454D1B02578F00A91A55 /* bar-highlight.png in Resources */,
+				16FA45561B027DD900A91A55 /* data-points.png in Resources */,
 				16FA44B21B00A43000A91A55 /* Main.storyboard in Resources */,
 				16FA44B71B00A43000A91A55 /* LaunchScreen.xib in Resources */,
 				16FA45501B02578F00A91A55 /* handle-hover@2x.png in Resources */,
